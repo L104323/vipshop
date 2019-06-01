@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul,
+			li {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			#box {
+				width: 974px;
+				height: 340px;
+				/*background: orange;*/
+				margin: 0 auto;
+				border: 1px solid green;
+				position: relative;
+			}
+			
+			#picbox {
+				width: 974px;
+				height: 340px;
+				background: palegreen;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.bigPic {
+				width: 974px;
+				height: 340px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="picbox">
+				<li class="bigPic"><img src="img/indexPicture/index_lunbo1.jpg" /></li>
+				<li class="bigPic"><img src="img/indexPicture/index_lunbo2.jpg" /></li>
+			</ul>
+		</div>
+		<script>
+			$(function(){
+			slider();
+			function slider(){
+//				inter();
+				//注意用全局变量，解决索引值保持一致，无缝缝合
+				var iNow = 0;
+				//定义全局的定时器变量，才能在onclick中调用
+				var timer;
+				
+				for(var i=0;i<oPicBtn.length;i++){
+					console.log( i );
+					bind(i);
+				}
+				function bind(index){
+					oPicBtn[index].onclick = function(){
+						//问题：点第一张图后就马上换下一张了，定时器会抢，所以要清掉定时器
+						clearInterval(timer);
+						
+						//点击瞬间索引值保持一致，才能让从当前点击的图片开始轮播
+						iNow = index;  
+						
+						console.log( 'dianji'+index );
+						changePic( index );
+						
+						//再次调用定时器
+						inter();
+					}
+				}
+				function changePic(){			
+					for(var j=0;j<oPicBtn.length;j++){
+						oBigPic[j].style.opacity = 0;
+						if(j==iNow){
+							oBigPic[iNow].style.opacity = 1;
+						}
+					}
+				}
+				//定时器
+				function inter(){
+					timer = setInterval(function(){
+						iNow++;
+						console.log('自动'+iNow);
+						if(iNow>7){
+							iNow = 0;
+						}					    
+						changePic(iNow);
+					},2000)
+				}
+
+			}
+		</script>
+	</body>
+</html>

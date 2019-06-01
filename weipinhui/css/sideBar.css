@@ -1,0 +1,28 @@
+#sideBar{
+	width: 36px;
+	height: 100%;
+	background-color: black;
+	position: fixed;
+	right: 0;
+	overflow: hidden;
+}
+#sideBar .iconS{
+	width: 20px;
+	height: 20px;
+	background-color: green;
+}
+#sideBox{
+	margin-top: 100px;
+}
+.sideBtn{
+	width: 36px;
+	height: 36px;
+	margin-bottom: 5px;
+	border: 1px solid greenyellow;
+}
+#sideBottom{
+	margin-top: 200px;
+}
+#account .iconS{
+	background-position: 0 0;
+}
