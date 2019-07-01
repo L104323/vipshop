@@ -1,0 +1,205 @@
+#sideBar{
+	width: 36px;
+	height: 100%;
+	background-color: black;
+	position: fixed;
+	right: 0;
+	z-index: 10;
+}
+#sideBox{
+	margin-top: 80px;
+	z-index: 10;
+}
+.sideBtn{
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	margin-bottom: 3px;
+	font-size: 13px;
+	color: white;
+	position: relative;
+	cursor: pointer;
+	z-index: 10;
+}
+#sideBottom{
+	margin-top: 100px;
+}
+
+/*完善*/
+.sideBtn .slidShows{
+	width: 246px;
+	/*height: 200px;*/
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	right: -382px;
+	transition:  width .5s;
+    background-color: #fff;
+    border: 1px solid #cecece;
+    border-right: none;  
+    transition: 2s;
+    transition: right .2s linear;
+    box-shadow: -4px 1px 8px rgba(0,0,0,.15);
+    z-index:2;
+}
+.sideBtn .slidShows img{
+	margin: 30px 89px 20px 89px;
+}
+#hellop{
+	color: black !important;
+	padding-bottom: 20px;
+}
+.sideReg{
+	color: #f10180 !important;
+}
+.safeBox{
+	width: 246px;
+    padding: 14px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    line-height: 22px;
+}
+.safeA{
+	color: black;
+	width: 40%;
+	padding: 12px;
+	height: 50px;
+}
+.safeA a{
+	color: black !important;
+}
+.safeA:hover a{
+	color: #f10180 !important;
+}
+.safeA:hover .meIcon{
+	color: #f10180 !important;
+}
+.safeA:nth-of-type(1){
+	border-right: 1px solid #cecece;
+}
+.meIcon{
+	color: black;
+	/*display: inline-block;*/
+	text-align: center;
+}
+.club{
+	width: 216px;
+	height: 50px;
+	text-align: right;
+	line-height: 50px;
+	padding-right: 30px;
+}
+.club a{
+	color: #20a0cd !important;
+}
+#brandCollect{
+	z-index: 10;
+}
+.reBox2{
+	width: 100px;
+	height: 36px;
+	position: absolute;
+	top: 0;
+	right: -136px;
+	background: white;
+	color: black;
+	width: 100px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 8px;
+    border-radius: 3px 0 0 3px;
+    border: 1px solid #ddd;
+    border-right: none;
+    font-size: 14px;
+    text-align: center;
+    transition: .3s linear;
+    z-index: -1;
+}
+#money:hover .reBox2{
+	right: 36px;
+}
+#brandCollect:hover .reBox2{
+	right: 36px;
+}
+#shopCollect:hover .reBox2{
+	right: 36px;
+}
+#trace:hover .reBox2{
+	right: 36px;
+}
+
+#sideBottom #vip:hover .reBox2{
+	right: 36px;
+}
+
+.sideClose{
+	width: 10px;
+	height: 10px;
+	padding: 20px;
+	position: absolute;
+	text-align: center;
+	line-height: 10px;
+	top: 0px;
+	right: 0px;
+	font-size: 20px;
+	cursor: pointer;
+	color: grey;
+}
+/****************/
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.eot');
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+      url('iconfont.woff2') format('woff2'),
+      url('iconfont.woff') format('woff'),
+      url('iconfont.ttf') format('truetype'),
+      url('iconfont.svg#iconfont') format('svg');
+}
+/**************************/
+#sideBox .sideBtn:nth-child(1){
+	height: 42px;
+}
+#sideBox .sideBtn:nth-child(1) .iconfont{
+	font-size: 20px;
+}
+#aa{
+	height: 127px;
+	padding: 20px 0;
+	font-size: 14px;
+	line-height: 20px;
+	background-color: #df147f;
+}
+#aa .iconfont{
+	font-size: 25px;
+	font-weight: 500;
+	line-height: 24px;
+}
+#yuan{
+	width: 18px;
+	height: 18px;
+	font-size: 12px;
+	background: white;
+	border-radius: 50%;
+	color: red;
+	text-align: center;
+	line-height: 18px;
+	margin: 5px auto;
+}
+#money .iconfont, #brandCollect .iconfont,#shopCollect .iconfont,#trace .iconfont{
+	font-size: 25px;
+	line-height: 36px;
+}
+
+#sideBottom .iconfont{
+	font-size: 20px;
+	line-height: 36px;
+}
+#sideBar a{
+	color: white;
+	text-decoration: none;
+}
+.sideBtn:hover{
+	background: #df147f;
+}
